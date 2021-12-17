@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  react-app:
+  frontend-app:
     build: .
     image: react-app:latest
     ports:
