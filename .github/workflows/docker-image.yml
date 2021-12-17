@@ -31,5 +31,5 @@ jobs:
           registry: ghcr.io
           # username: ${{ github.repository_owner }}
           # password: ${{ secrets.DOCKER_PASSWORD }}
-          # secrets: |
-          #   GIT_AUTH_TOKEN=${{ secrets.GHCR_TOKEN }}
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.TOKEN }}
