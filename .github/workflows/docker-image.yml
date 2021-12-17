@@ -30,7 +30,6 @@ jobs:
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          push: true
           image: sourabhraghavopn/react-app
           registery: ghcr.io
           username: ${{ github.actor }}
