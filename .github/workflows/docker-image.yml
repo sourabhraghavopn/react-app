@@ -29,5 +29,6 @@ jobs:
           push: true
           image: sourabhopn/demo
           tags: react-app
+          push: ${{ github.ref == 'refs/heads/main' }}
           secrets: |
             GIT_AUTH_TOKEN=${{ secrets.GHCR_TOKEN }}
