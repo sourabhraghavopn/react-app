@@ -28,5 +28,5 @@ jobs:
         with:
           tags: ghcr.io/sourabhraghavopn/react-app:latest
           push: true
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.GHCR_TOKEN }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
