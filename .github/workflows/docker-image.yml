@@ -21,7 +21,6 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
       # - name: Log in to the Container registry
       #   uses: docker/login-action@v1
       #   with:
@@ -34,5 +33,5 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.TOKEN }}
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.TOKEN }}
