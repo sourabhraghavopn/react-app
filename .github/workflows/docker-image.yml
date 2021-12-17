@@ -28,3 +28,5 @@ jobs:
         with:
           push: true
           tags: react-app
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.GHCR_TOKEN }}
