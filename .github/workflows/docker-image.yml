@@ -27,8 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          image: sourabhopn/demo
           tags: react-app
-          # secrets: |
-          #   GIT_AUTH_TOKEN=${{ secrets.GHCR_TOKEN }}
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.GHCR_TOKEN }}
