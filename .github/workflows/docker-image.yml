@@ -31,6 +31,6 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
           image: sourabhraghavopn/react-app
-          registery: ghcr.io
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
