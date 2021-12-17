@@ -26,6 +26,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          tags: ghcr.io/sourabhraghavopn/react-app
+          tags: ghcr.io/sourabhraghavopn/react-app:latest
           secrets: |
             GIT_AUTH_TOKEN=${{ secrets.GHCR_TOKEN }}
