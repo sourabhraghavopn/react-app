@@ -21,7 +21,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
+          username: sourabhraghavopn
           password: ${{ secrets.GHCR_TOKEN }}
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
