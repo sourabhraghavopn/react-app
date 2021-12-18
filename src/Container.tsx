@@ -30,6 +30,7 @@ const TabPanel = (props: any) => {
   );
 };
 export const Container = () => {
+  const [host, setHost] = React.useState("");
   const [value, setValue] = React.useState(0);
   const [shortUrl, setShortUrl] = React.useState("");
   const [originalUrl, setOriginalUrl] = React.useState("");
@@ -43,7 +44,7 @@ export const Container = () => {
 
   const getOriginalUrl = () => {
     if (shortUrl === "") return;
-    fetch(`http://localhost:8989/get`, {
+    fetch(`${host}/get`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -77,7 +78,7 @@ export const Container = () => {
 
   const getShortUrl = () => {
     if (originalUrl === "") return;
-    fetch(`http://localhost:8989/create`, {
+    fetch(`${host}/create`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -110,6 +111,25 @@ export const Container = () => {
   };
   return (
     <div className="container">
+      <div className="host-name">
+        <Paper
+          component="form"
+          sx={{
+            p: "2px 4px",
+            display: "flex",
+            alignItems: "center",
+            width: 400,
+          }}
+        >
+          <InputBase
+            value={host}
+            onChange={(event) => setHost(event.target.value)}
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="Host"
+            inputProps={{ "aria-label": "search google maps" }}
+          />
+        </Paper>
+      </div>
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
