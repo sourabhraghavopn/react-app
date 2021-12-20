@@ -11,7 +11,9 @@
   padding: 50px;
   padding-top: 5px;
 }
-
+.MuiInputBase-input {
+  text-align: center;
+}
 .MuiPaper-root {
   width: 100% !important;
   border-radius: 10px !important;

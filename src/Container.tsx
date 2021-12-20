@@ -125,8 +125,8 @@ export const Container = () => {
             value={host}
             onChange={(event) => setHost(event.target.value)}
             sx={{ ml: 1, flex: 1 }}
-            placeholder="Host"
-            inputProps={{ "aria-label": "search google maps" }}
+            placeholder="http://3.144.6.137:32380"
+            defaultValue={"http://3.144.6.137:32380"}
           />
         </Paper>
       </div>
