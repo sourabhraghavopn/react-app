@@ -14,13 +14,13 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        # with:
-        # build: yarn install
-        # start: yarn go
-        # wait-on-timeout: 300
-        # config-file: cypress.json
-        # wait-on: "http://localhost:3000"
-        # headless: true
+        with:
+        build: yarn install
+        start: yarn go
+        wait-on-timeout: 300
+        config-file: cypress.json
+        wait-on: "http://localhost:3000"
+        headless: true
 
       - name: Artifacts
         uses: actions/upload-artifact@v2
