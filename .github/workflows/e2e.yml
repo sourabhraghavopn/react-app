@@ -26,6 +26,7 @@ jobs:
           config-file: cypress.json
           wait-on: "http://localhost:3000"
           headless: true
+
       - name: Artifacts
         uses: actions/upload-artifact@v2
         if: always()
